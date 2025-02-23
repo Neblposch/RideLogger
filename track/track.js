@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function goBack() {
-    window.location.href = './index.html';
+    window.location.href = '../index.html';
 }
 
 function startTimer() {
-    window.location.href = './timer.html';
+    window.location.href = './Timer/timer.html';
 }

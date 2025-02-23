@@ -38,7 +38,7 @@ const stopTimer = () => {
     saveButton = document.createElement('button');
     saveButton.innerText = 'Save';
     saveButton.onclick = () => {
-        window.location.href = 'track.html';
+        window.location.href = '../track.html';
     };
 
     if (timerContainer) { // Ensure timerContainer exists before appending
