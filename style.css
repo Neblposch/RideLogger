@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    text-align: center;
+    width: 100vw;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+button, input {
+    width: 94vw;
+    height: 50px;
+    font-size: 1.5em;
+    margin: 1vh 3vw;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4b3e;
+}
+
+.track-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    height: fit-content;
+    padding: 1em;
+    color: #ffffff;
+}
+
+.track-button:active {
+    background-color: #0056b3;
+}
+
+.save-button {
+    padding: 0;
+    height: 10vh;
+    background-color: #28a745;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.save-button:active {
+    background-color: #218838;
+}
+
+#timer {
+    font-size: 3em;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-size: 1.5em;
+}
+
+.wide-form {
+    width: 100vw;
+}
+
+.wide-form input, .wide-form select, .wide-form button {
+    width: 100vw;
+    padding: 1em;
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/*============================= Track Page ================================== */
+.start-button {
+    width: 94vw;
+    height: 50vh;
+    font-size: 2em;
+    background-color: #ff6f61;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*============================= Track Page ================================== */
+
+
+#timerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+#timer {
+    font-size: 20vw;
+    margin-bottom: 20px;
+    width: 100vw;
+
+}
+
+.stop-button {
+    width: 94vw;
+    height: 10vh;
+    font-size: 2em;
+    background-color: #ff6f61;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
