@@ -9,9 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let previousRuns = JSON.parse(localStorage.getItem('runs')) || [];
     previousRuns.forEach(run => {
         if (run.track.name === track.name) {
-            let runElement = document.createElement('div');
-            runElement.innerText = `Run: ${run.time}`;
-            previousRunsContainer.appendChild(runElement);
+            let runButton = document.createElement('button');
+            runButton.className = 'run-button';
+            runButton.innerText = `Run: ${run.time}`;
+            runButton.addEventListener('click', () => {
+                // Add your desired functionality here
+                alert(`Run time: ${run.time}`);
+            });
+            previousRunsContainer.appendChild(runButton);
         }
     });
 });

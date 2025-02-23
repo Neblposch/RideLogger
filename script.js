@@ -28,6 +28,7 @@ function saveData(){
     localStorage.setItem('AlreadyLoggedIn', true)
 }
 
+
 function showStandardPage() {
     let container = document.getElementById('container');
     container.innerHTML = `
@@ -39,16 +40,38 @@ function showStandardPage() {
 
     let tracksContainer = document.getElementById('tracksContainer');
     let tracks = JSON.parse(localStorage.getItem('tracks')) || [];
-    tracks.forEach(track => {
+    tracks.forEach((track, index) => {
+        let trackElement = document.createElement('div');
+        trackElement.className = 'track-item';
+
         let trackButton = document.createElement('button');
         trackButton.className = 'track-button';
-        trackButton.innerText = `${track.name} - ${track.distance} km - ${track.type}`;
+        trackButton.innerHTML = `${track.name} - ${track.distance} km - ${track.type}`;
+
+        let deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            deleteTrack(index);
+        });
+
+        trackButton.appendChild(deleteButton);
         trackButton.addEventListener('click', () => {
             navigateToTrackPage(track);
         });
-        tracksContainer.appendChild(trackButton);
+
+        trackElement.appendChild(trackButton);
+        tracksContainer.appendChild(trackElement);
     });
 }
+
+function deleteTrack(index) {
+    let tracks = JSON.parse(localStorage.getItem('tracks')) || [];
+    tracks.splice(index, 1);
+    localStorage.setItem('tracks', JSON.stringify(tracks));
+    showStandardPage();
+}
+
 
 function navigateToTrackPage(track) {
     localStorage.setItem('currentTrack', JSON.stringify(track));
@@ -65,7 +88,6 @@ function showAddTrackForm() {
             <input type="text" id="trackDistance" name="trackDistance" pattern="\\d+(\\.\\d{1,2})?" required>
             <label for="trackType">Track Type:</label>
             <select id="trackType" name="trackType" required>
-                <option value="circuit">Circuit</option>
                 <option value="uphill">Uphill</option>
                 <option value="downhill">Downhill</option>
             </select>

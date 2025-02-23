@@ -30,14 +30,22 @@ button, input {
 }
 
 button {
-    background-color: #ff6f61;
-    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ff4b3e;
+}
+
+.delete-button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    box-shadow: none;
+    width: 5vw;
+    height: 5vw;
+    right: 0;
+    background-image: url("./img/delete_4219.png");
+    background-size: cover;
 }
 
 .track-button {
