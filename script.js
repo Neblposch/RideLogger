@@ -52,7 +52,7 @@ function showStandardPage() {
 
 function navigateToTrackPage(track) {
     localStorage.setItem('currentTrack', JSON.stringify(track));
-    window.location.href = 'track.html';
+    window.location.href = './track.html';
 }
 
 function showAddTrackForm() {
